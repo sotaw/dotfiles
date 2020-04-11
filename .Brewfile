@@ -34,9 +34,6 @@ brew "zlib"
 cask "sequel-pro-nightly"
 mas "Airmail", id: 918858936
 mas "Fantastical", id: 975937182
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
 mas "RunCat", id: 1429033973
 mas "Todoist", id: 585829637
 mas "Xcode", id: 497799835
