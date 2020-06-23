@@ -134,6 +134,13 @@ alias sudo='sudo '
 alias -g L='| less'
 alias -g G='| grep'
 
+# shortcut
+alias g='git'
+alias d='docker'
+alias dc='docker-compose'
+alias dcu='docker-compose up'
+alias dcd='docker-compose down'
+
 # C で標準出力をクリップボードにコピーする
 # mollifier delta blog : http://mollifier.hatenablog.com/entry/20100317/p1
 if which pbcopy >/dev/null 2>&1 ; then
