@@ -22,7 +22,7 @@ SAVEHIST=1000000
 # 1行表示
 # PROMPT="%~ %# "
 # 2行表示
-PROMPT="%F{yellow}[%n@%m]%{${reset_color}%} %~
+PROMPT="%F{magenta}[%n@%m]%{${reset_color}%} %~
 %# "
 
 # 単語の区切り文字を指定する
@@ -141,6 +141,8 @@ alias dc='docker-compose'
 alias dcu='docker-compose up'
 alias dcd='docker-compose down'
 
+alias nyarn='yarn'
+
 # C で標準出力をクリップボードにコピーする
 # mollifier delta blog : http://mollifier.hatenablog.com/entry/20100317/p1
 if which pbcopy >/dev/null 2>&1 ; then
@@ -182,6 +184,7 @@ export LSCOLORS=Cxfxcxdxbxegedabagacad
 function aws_profile() {
   export AWS_PROFILE="$@"
 }
+alias tf='terraform'
 
 # -------------------------------------------------
 #  $ env 設定
@@ -189,3 +192,15 @@ function aws_profile() {
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+export NODE_OPTIONS="--max-old-space-size=10240"
+
+source <(kubectl completion zsh)
+
+export GOPATH=$HOME/.go
+
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+compinit
+
+complete -C '/usr/local/bin/aws_completer' aws
